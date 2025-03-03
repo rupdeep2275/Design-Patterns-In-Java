@@ -20,7 +20,7 @@ public class Client {
         stockTradingManager.registerObserver(emailService);
         stockTradingManager.registerObserver(appService);
 
-        ScheduledExecutorService executorService = Executors.newScheduledThreadPool(2);
+        ScheduledExecutorService executorService = Executors.newScheduledThreadPool(1);
 
         executorService.scheduleAtFixedRate(() -> {
             double newPrice = 1000 - Math.random() * 100;
